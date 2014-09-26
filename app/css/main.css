@@ -1,0 +1,102 @@
+body {
+  background-color: #141414;
+  color: #ffffff;
+}
+.academy-item.ng-enter,
+.academy-item.ng-leave {
+  -webkit-transition: 0.5s ease-out all;
+  transition: 0.5s ease-out all;
+}
+.academy-item.ng-enter {
+  opacity: 0;
+}
+.academy-item.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.academy-item.ng-enter-stagger {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+.academy-item.ng-leave-stagger {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+.group-filter {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: height;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+}
+.menu {
+  background-color: #20272d;
+}
+.menu .search-text {
+  cursor: text;
+  overflow: hidden;
+  background-color: #3c4c55;
+  text-align: left;
+  padding-left: 20px;
+  height: 40px;
+  border-left: 4px solid #3c4c55;
+  border-width: 0px;
+  border-left-width: 4px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.425, 0, 0, 1);
+}
+.menu .search-text:hover,
+.menu .search-text:focus {
+  border-left-color: #70c989;
+  background-color: #f5f6f8;
+}
+.menu ul {
+  list-style: none;
+}
+.menu ul li {
+  display: inline-block;
+}
+.menu-button {
+  display: inline-block;
+  text-align: center;
+  background-color: #2b2b2b;
+  padding: 12px;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.425, 0, 0, 1);
+  margin-left: 4px;
+  transform: skewX(-20deg);
+}
+.menu-button:hover,
+.menu-button:active {
+  background-color: #1c1c1c;
+}
+.menu-button span {
+  display: inline-block;
+  transform: skewX(20deg);
+}
+.shade {
+  height: 30px;
+  margin-top: 10px;
+}
+.shade-1 {
+  background-color: #1c1c1c;
+}
+.shade-2 {
+  background-color: #232323;
+}
+.shade-3 {
+  background-color: #2b2b2b;
+}
+.shade-4 {
+  background-color: #333333;
+}

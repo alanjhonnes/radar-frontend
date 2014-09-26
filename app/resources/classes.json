@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Aula 1",
+        "slug": "aula-1",
+        "icon": "img/placeholder.png"
+    },
+    {
+        "id": 2,
+        "name": "Aula 2",
+        "slug": "aula-2",
+        "icon": "img/placeholder.png"
+    },
+    {
+        "id": 3,
+        "name": "Aula 3",
+        "slug": "aula-3",
+        "icon": "img/placeholder.png"
+    },
+    {
+        "id": 4,
+        "name": "Aula 4",
+        "slug": "aula-4",
+        "icon": "img/placeholder.png"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Extra 1",
+        "slug": "extra-1",
+        "icon": "img/placeholder.png"
+    },
+    {
+        "id": 2,
+        "name": "Extra 2",
+        "slug": "extra-2",
+        "icon": "img/placeholder.png"
+    },
+    {
+        "id": 3,
+        "name": "Extra 3",
+        "slug": "extra-3",
+        "icon": "img/placeholder.png"
+    },
+    {
+        "id": 4,
+        "name": "Extra 4",
+        "slug": "extra-4",
+        "icon": "img/placeholder.png"
+    }
+]

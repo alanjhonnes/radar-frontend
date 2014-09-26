@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<html lang="en" ng-app="radarfit" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<html lang="en" ng-app="radarfit" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>
-<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<html lang="en" ng-app="radarfit" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="radarfit" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,38 +15,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/main.css">
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<base href="/">
+<body ng-controller="MainCtrl">
 
 <header>
 
 </header>
 
-<ul class="menu">
-    <li><a href="#/">Academias</a></li>
-    <li><a href="#/personal">Personal Trainers</a></li>
-</ul>
+<div class="shade shade-1"></div>
+<div class="shade shade-2"></div>
+<div class="shade shade-3"></div>
+<div class="shade shade-4"></div>
 
-<!--[if lt IE 7]>
+<section class="menu" ng-controller="FiltersCtrl">
+    <form novalidate class="search-form" ng-submit="applyFilters()">
+        <ul>
+            <li>
+                <input class="search-text" type="text" ng-model="filters.zipcode"/>
+            </li>
+            <li>
+                <input type="radio" ng-model="filters.type" value="academy"/>
+            </li>
+            <li>
+                <input type="radio" ng-model="filters.type" value="personal"/>
+            </li>
+
+            <li ng-repeat="groupFilter in groupFilters">
+                <div class="menu-button" ng-click="toggleGroup(groupFilter.name)">
+                    <span>{{groupFilter.name}}</span>
+                </div>
+            </li>
+        </ul>
+    </form>
+    <div class="group-filter" ng-repeat="groupFilter in groupFilters">
+        <div height-switchable="activeGroupFilter === groupFilter.name">
+            <button ng-click="addFilter(groupFilter.type, option.name)" ng-repeat="option in groupFilter.options">
+                {{ option.name }}
+            </button>
+        </div>
+    </div>
+</section>
+
+<!--[if lt IE 9]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
+<!--
 <section id="map" ng-controller="MapsCtrl">
 
-    <google-map center=''
-                zoom='{expression}'
-                draggable='{string}'
-                dragging='{expression}'
-                refresh='{expression}'
-                options='{expression}'
-                events='{expression}'
-                bounds='{expression}'
-                pan='{string or boolean}'>
 
-    </google-map>
+</section>
+-->
+
+<section>
+    <div class="academy-item" ng-show="filters.type === 'academy'" ng-repeat="academy in filteredAcademies">
+        <academy-item item="academy" bindonce></academy-item>
+    </div>
+    <div class="trainer-item" ng-show="filters.type === 'trainer'" ng-repeat="trainer in filteredTrainers">
+        <academy-item item="trainer" bindonce></academy-item>
+    </div>
 </section>
 
 
@@ -54,13 +85,18 @@
 
 <section ng-view="comparison-tab"></section>
 
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+
+<script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+<script src='bower_components/lodash/dist/lodash.underscore.js'></script>
 <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+
 <script src="bower_components/angular-bindonce/bindonce.js"></script>
+
 <script src="js/app.js"></script>
 <script src="js/services.js"></script>
 <script src="js/controllers.js"></script>

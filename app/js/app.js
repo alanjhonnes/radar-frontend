@@ -2,9 +2,12 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('rafarfit', [
+angular.module('radarfit', [
     'ui.router',
-    'google-maps',
+
+    'ngResource',
+    'ngAnimate',
+    'pasvaz.bindonce',
     'radarfit.filters',
     'radarfit.services',
     'radarfit.directives',
