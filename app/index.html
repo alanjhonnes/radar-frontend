@@ -11,10 +11,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RadarFit</title>
-    <meta name="description" content="">
+    <meta name="description" content="O serviço de busca de academias e personal trainers.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
@@ -22,42 +22,24 @@
 <body ng-controller="MainCtrl">
 
 <header>
-
+    <nav>
+        <div class="">
+            <a ui-sref="academy"><span>Busca</span></a>
+            <a ui-sref="company.about"><span>Sobre</span></a>
+            <a ui-sref="user.login"><span>Login</span></a>
+        </div>
+    </nav>
 </header>
-
+<!--
 <div class="shade shade-1"></div>
 <div class="shade shade-2"></div>
 <div class="shade shade-3"></div>
 <div class="shade shade-4"></div>
+-->
+<div ui-view="menu"></div>
 
-<section class="menu" ng-controller="FiltersCtrl">
-    <form novalidate class="search-form" ng-submit="applyFilters()">
-        <ul>
-            <li>
-                <input class="search-text" type="text" ng-model="filters.zipcode"/>
-            </li>
-            <li>
-                <input type="radio" ng-model="filters.type" value="academy"/>
-            </li>
-            <li>
-                <input type="radio" ng-model="filters.type" value="personal"/>
-            </li>
+<div ui-view="content"></div>
 
-            <li ng-repeat="groupFilter in groupFilters">
-                <div class="menu-button" ng-click="toggleGroup(groupFilter.name)">
-                    <span>{{groupFilter.name}}</span>
-                </div>
-            </li>
-        </ul>
-    </form>
-    <div class="group-filter" ng-repeat="groupFilter in groupFilters">
-        <div height-switchable="activeGroupFilter === groupFilter.name">
-            <button ng-click="addFilter(groupFilter.type, option.name)" ng-repeat="option in groupFilter.options">
-                {{ option.name }}
-            </button>
-        </div>
-    </div>
-</section>
 
 <!--[if lt IE 9]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -71,32 +53,24 @@
 </section>
 -->
 
-<section>
-    <div class="academy-item" ng-show="filters.type === 'academy'" ng-repeat="academy in filteredAcademies">
-        <academy-item item="academy" bindonce></academy-item>
-    </div>
-    <div class="trainer-item" ng-show="filters.type === 'trainer'" ng-repeat="trainer in filteredTrainers">
-        <academy-item item="trainer" bindonce></academy-item>
-    </div>
-</section>
 
-
-<section ng-view="tab-content"></section>
-
-<section ng-view="comparison-tab"></section>
-
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-data/dist/angular-data.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
-
+<script src='bower_components/lodash/dist/lodash.underscore.js'></script>
+<!--
 <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
 
-<script src='bower_components/lodash/dist/lodash.underscore.js'></script>
-<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+-->
 <script src="bower_components/angular-bindonce/bindonce.js"></script>
 
+<script src="bower_components/angular-masonry/angular-masonry.js"></script>
 <script src="js/app.js"></script>
 <script src="js/services.js"></script>
 <script src="js/controllers.js"></script>

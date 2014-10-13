@@ -1,0 +1,35 @@
+<section class="menu" ng-controller="FiltersCtrl">
+    <form novalidate class="search-form" ng-submit="applyFilters()">
+        <ul>
+            <li>
+                <input class="search-text" type="text" ng-model="filters.zipcode"/>
+            </li>
+            <li>
+                <label for="input-academy">Academia</label>
+                <input id="input-academy" type="radio" ng-model="filters.type" value="academy"/>
+            </li>
+            <li>
+                <label for="input-trainer">Personal Trainer</label>
+                <input id="input-trainer" type="radio" ng-model="filters.type" value="trainer"/>
+            </li>
+
+            <li ng-repeat="groupFilter in groupFilters">
+                <div class="menu-button" ng-click="toggleGroup(groupFilter.name)">
+                    <span>{{groupFilter.name}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="menu-button" ng-click="clearFilters()">
+                    <span>Limpar</span>
+                </div>
+            </li>
+        </ul>
+    </form>
+    <div class="group-filter" ng-repeat="groupFilter in groupFilters">
+        <div height-switchable="activeGroupFilter === groupFilter.name">
+            <button ng-click="addFilter(groupFilter.type, option.slug)" ng-repeat="option in groupFilter.options">
+                {{ option.name }}
+            </button>
+        </div>
+    </div>
+</section>

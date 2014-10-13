@@ -10,7 +10,10 @@
         "angular-route": "1.2.x",
         "angular-loader": "1.2.x",
         "angular-mocks": "~1.2.x",
-        "html5-boilerplate": "~4.3.0"
+        "html5-boilerplate": "~4.3.0",
+        "angular-masonry": "~0.9.1",
+        "gsap": "~1.13.2",
+        "angular-data": "~1.0.0"
     },
     "resolutions": {
         "angular": "1.2.24"

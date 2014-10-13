@@ -1,0 +1,7 @@
+<section class="grid-wrapper">
+    <div class="academy-tab filter-tab" ng-show="filters.type === 'academy'">
+        <div class="academy-item item" ng-repeat="academy in filtered.academies">
+            <academy-item item="academy" ng-click="showAcademy(academy)" class="item-content" bindonce></academy-item>
+        </div>
+    </div>
+</section>

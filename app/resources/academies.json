@@ -1,23 +1,24 @@
 [
     {
         "name": "Academia 1",
+        "slug": "academia-1",
         "address": "Rua tal, numero tal",
         "photos": [
-            "img/placeholder.png",
+            "img/academies/1.jpg",
             "img/placeholder.png",
             "img/placeholder.png"
         ],
         "classes": [
             {
                 "id": 3,
-                "name": "Classe 3",
-                "slug": "classe-3",
+                "name": "Aula 3",
+                "slug": "aula-3",
                 "icon": "img/placeholder.png"
             },
             {
                 "id": 4,
-                "name": "Classe 4",
-                "slug": "classe-4",
+                "name": "Aula 4",
+                "slug": "aula-4",
                 "icon": "img/placeholder.png"
             }
         ],
@@ -44,23 +45,516 @@
     },
     {
         "name": "Academia 2",
+        "slug": "academia-2",
         "address": "Rua tal, numero tal",
         "photos": [
-            "img/placeholder.png",
+            "img/academies/2.jpg",
             "img/placeholder.png",
             "img/placeholder.png"
         ],
         "classes": [
             {
                 "id": 1,
-                "name": "Classe 1",
-                "slug": "classe-1",
+                "name": "Aula 1",
+                "slug": "aula-1",
                 "icon": "img/placeholder.png"
             },
             {
                 "id": 2,
-                "name": "Classe 2",
-                "slug": "classe-2",
+                "name": "Aula 2",
+                "slug": "aula-2",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Extra 4",
+                "slug": "extra-4",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 3",
+        "slug": "academia-3",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/3.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 3,
+                "name": "Aula 3",
+                "slug": "aula-3",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Aula 4",
+                "slug": "aula-4",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 1,
+                "name": "Extra 1",
+                "slug": "extra-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 3,
+                "name": "Extra 3",
+                "slug": "extra-3",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 4",
+        "slug": "academia-4",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/4.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 1,
+                "name": "Aula 1",
+                "slug": "aula-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Aula 2",
+                "slug": "aula-2",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Extra 4",
+                "slug": "extra-4",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 5",
+        "slug": "academia-5",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/5.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 3,
+                "name": "Aula 3",
+                "slug": "aula-3",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Aula 4",
+                "slug": "aula-4",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 1,
+                "name": "Extra 1",
+                "slug": "extra-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 3,
+                "name": "Extra 3",
+                "slug": "extra-3",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 6",
+        "slug": "academia-6",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/6.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 1,
+                "name": "Aula 1",
+                "slug": "aula-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Aula 2",
+                "slug": "aula-2",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Extra 4",
+                "slug": "extra-4",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 7",
+        "slug": "academia-7",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/1.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 3,
+                "name": "Aula 3",
+                "slug": "aula-3",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Aula 4",
+                "slug": "aula-4",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 1,
+                "name": "Extra 1",
+                "slug": "extra-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 3,
+                "name": "Extra 3",
+                "slug": "extra-3",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 8",
+        "slug": "academia-8",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/2.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 1,
+                "name": "Aula 1",
+                "slug": "aula-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Aula 2",
+                "slug": "aula-2",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Extra 4",
+                "slug": "extra-4",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 9",
+        "slug": "academia-9",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/3.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 3,
+                "name": "Aula 3",
+                "slug": "aula-3",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Aula 4",
+                "slug": "aula-4",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 1,
+                "name": "Extra 1",
+                "slug": "extra-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 3,
+                "name": "Extra 3",
+                "slug": "extra-3",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 10",
+        "slug": "academia-10",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/4.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 1,
+                "name": "Aula 1",
+                "slug": "aula-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Aula 2",
+                "slug": "aula-2",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Extra 4",
+                "slug": "extra-4",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 11",
+        "slug": "academia-11",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/5.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 3,
+                "name": "Aula 3",
+                "slug": "aula-3",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Aula 4",
+                "slug": "aula-4",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 1,
+                "name": "Extra 1",
+                "slug": "extra-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 3,
+                "name": "Extra 3",
+                "slug": "extra-3",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 12",
+        "slug": "academia-12",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/6.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 1,
+                "name": "Aula 1",
+                "slug": "aula-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Aula 2",
+                "slug": "aula-2",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Extra 4",
+                "slug": "extra-4",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 13",
+        "slug": "academia-13",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/1.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 3,
+                "name": "Aula 3",
+                "slug": "aula-3",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 4,
+                "name": "Aula 4",
+                "slug": "aula-4",
+                "icon": "img/placeholder.png"
+            }
+        ],
+        "extras": [
+            {
+                "id": 1,
+                "name": "Extra 1",
+                "slug": "extra-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Extra 2",
+                "slug": "extra-2",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 3,
+                "name": "Extra 3",
+                "slug": "extra-3",
+                "icon": "img/placeholder.png"
+            }
+        ]
+    },
+    {
+        "name": "Academia 14",
+        "slug": "academia-14",
+        "address": "Rua tal, numero tal",
+        "photos": [
+            "img/academies/2.jpg",
+            "img/placeholder.png",
+            "img/placeholder.png"
+        ],
+        "classes": [
+            {
+                "id": 1,
+                "name": "Aula 1",
+                "slug": "aula-1",
+                "icon": "img/placeholder.png"
+            },
+            {
+                "id": 2,
+                "name": "Aula 2",
+                "slug": "aula-2",
                 "icon": "img/placeholder.png"
             }
         ],

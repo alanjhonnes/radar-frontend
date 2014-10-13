@@ -1,0 +1,7 @@
+<section class="grid-wrapper">
+    <div class="trainer-tab filter-tab" ng-show="filters.type === 'trainer'">
+        <div class="trainer-item item" ng-repeat="trainer in filtered.trainers">
+            <academy-item item="trainer" class="item-content" bindonce></academy-item>
+        </div>
+    </div>
+</section>

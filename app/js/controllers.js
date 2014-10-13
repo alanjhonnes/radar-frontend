@@ -8,7 +8,6 @@ angular.module('radarfit.controllers', [])
         var Academy = $resource("/resources/academies.json");
         $scope.academies = Academy.query();
 
-
         var Trainer = $resource("/resources/trainers.json");
         $scope.trainers = Trainer.query();
 
@@ -25,8 +24,10 @@ angular.module('radarfit.controllers', [])
         };
 
 
-        $scope.filteredAcademies = $scope.academies;
-        $scope.filteredTrainers = $scope.trainers;
+        $scope.filtered = {
+            academies: $scope.academies,
+            trainers: $scope.trainers
+        }
 
     }])
 
@@ -58,24 +59,39 @@ angular.module('radarfit.controllers', [])
         $scope.activeGroupFilter = null;
 
         $scope.applyFilters = function () {
-            $scope.filteredAcademies = _.filter($scope.academies,
-                function (item) {
-                    _.forEach($scope.filters.classes, function (classFilter) {
-                        if (!_.some(item.classes, function (itemClass) {
-                                return classFilter === itemClass;
-                            }));
+            if ($scope.filters.type === "academy") {
+                $scope.filtered.academies = _.filter($scope.academies,
+                    function (item) {
+                        var valid = true;
+                        _.forEach($scope.filters.classes, function (classFilter) {
+                            if (!_.some(item.classes, function (itemClass) {
+                                    return classFilter === itemClass.slug;
+                                })) {
+                                valid = false;
+                            }
+                            ;
+                        });
+                        if (valid) {
+                            _.forEach($scope.filters.extras, function (extraFilter) {
+                                if (!_.some(item.extras, function (itemExtra) {
+                                        return extraFilter === itemExtra.slug;
+                                    })) {
+                                    valid = false;
+                                }
+                                ;
+                            });
+                        }
+                        return valid;
                     });
-                    _.forEach($scope.filters.extras, function (extraFilter) {
-                        if (!_.some(item.extras, function (itemExtra) {
-                                return extraFilter === itemExtra;
-                            }));
-                    });
+            }
+            else if ($scope.filters.type === "trainer") {
 
-                    return false;
+            }
 
-                });
+
 
             $log.log($scope.filters);
+            $log.log($scope.filtered);
         };
 
         $scope.addFilter = function (type, name) {
@@ -92,6 +108,12 @@ angular.module('radarfit.controllers', [])
                 $scope.activeGroupFilter = groupName;
             }
         };
+
+        $scope.clearFilters = function () {
+            $scope.filters.classes = [];
+            $scope.filters.extras = [];
+            $scope.applyFilters();
+        }
 
 
         /*

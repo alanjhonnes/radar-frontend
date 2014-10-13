@@ -1,29 +1,90 @@
 body {
   background-color: #141414;
   color: #ffffff;
+    padding: 0px 12px;
 }
-.academy-item.ng-enter,
-.academy-item.ng-leave {
-  -webkit-transition: 0.5s ease-out all;
-  transition: 0.5s ease-out all;
+
+.grid-wrapper {
+    margin-top: 10px;
 }
-.academy-item.ng-enter {
+
+.filter-tab {
+    opacity: 1;
+}
+
+.filter-tab.ng-hide-add,
+.filter-tab.ng-hide-remove {
+    transition: 0s linear all;
+}
+
+.filter-tab.ng-hide-add-active,
+.filter-tab.ng-hide-remove-active {
+    -webkit-transition: 0.5s cubic-bezier(0.425, 0, 0, 1) all;
+    transition: 0.5s cubic-bezier(0.425, 0, 0, 1) all;
+}
+
+.filter-tab.ng-hide {
   opacity: 0;
 }
-.academy-item.ng-enter.ng-enter-active {
+
+.item {
+    cursor: pointer;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #253036;
+    overflow: hidden;
+    width: 400px;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    -webkit-transition: 0.5s cubic-bezier(0.425, 0, 0, 1) all;
+    transition: 0.5s cubic-bezier(0.425, 0, 0, 1) all;
+    border-bottom-color: transparent;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+}
+
+.item:hover {
+    border-bottom-color: #b4ff14;
+}
+
+.item.ng-enter,
+.item.ng-leave {
+    -webkit-transition: 0.5s cubic-bezier(0.425, 0, 0, 1) all;
+    transition: 0.5s cubic-bezier(0.425, 0, 0, 1) all;
+}
+
+.item.ng-enter {
+    opacity: 0;
+}
+
+.item.ng-enter.ng-enter-active {
   opacity: 1;
 }
-.academy-item.ng-enter-stagger {
+
+.item.ng-enter-stagger {
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
   -webkit-transition-duration: 0s;
   transition-duration: 0s;
 }
-.academy-item.ng-leave-stagger {
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-  -webkit-transition-duration: 0s;
-  transition-duration: 0s;
+
+.item.ng-leave {
+    -webkit-transition: 0.4s cubic-bezier(0.425, 0, 0, 1) all;
+    transition: 0.4s cubic-bezier(0.425, 0, 0, 1) all;
+    opacity: 1;
+}
+
+.item.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.item-content {
+    padding: 10px;
+    display: block;
 }
 .group-filter {
   margin: 0 !important;
@@ -36,8 +97,15 @@ body {
   transition-duration: 0.6s;
   transition-timing-function: ease-in-out;
 }
-.menu {
+
+.menu form {
   background-color: #20272d;
+    margin-bottom: 10px;
+}
+
+.menu ul {
+    margin-bottom: 0;
+    padding-left: 0;
 }
 .menu .search-text {
   cursor: text;
